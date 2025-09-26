@@ -6,14 +6,6 @@ pipeline {
         IMAGE_NAME = 'your-dockerhub-username/sample-app'
     }
 
-    stages {
-        stage('Clone Repo') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Bharathzero7/calculator.git
->.git'
-            }
-        }
-
         stage('Run Unit Tests') {
             steps {
                 sh './run_tests.sh'
@@ -45,3 +37,4 @@ pipeline {
     }
 
 }
+
